@@ -2,8 +2,8 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Parameters:
   BucketName: 
-    key: type2
     Type: String
+    Default: type2    
 Resources:
   ApiGateway:
     Type: AWS::Serverless::Api
