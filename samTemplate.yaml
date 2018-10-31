@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Parameters:
+  BucketName:
+    Type: String
+Resources:
+  ApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Development
+      DefinitionUri: s3://swaggerdeliforcedurga/Deliforceserverapi.yaml
+  DeliforceAnalyticsdriverLoggetMethod:
+     Type: AWS::Serverless::Function
+     Properties:
+       FunctionName: Deliforce_Analytics_driverLog_get
+       Timeout: 300
+       Handler: index.handler
+       Runtime: nodejs6.10
+       CodeUri: ./Deliforce_Analytics_driverLog_get
+       Policies: AWSLambdaFullAccess
+       Role: arn:aws:iam::539977196287:role/favas-poc
+
+  DeliforceAnalyticsontimegetMethod:
+     Type: AWS::Serverless::Function
+     Properties:
+       FunctionName: Deliforce_Analytics_ontime_get
+       Timeout: 300
+       Handler: index.handler
+       Runtime: nodejs6.10
+       CodeUri: ./Deliforce_Analytics_ontime_get
+       Policies: AWSLambdaFullAccess
+       Role: arn:aws:iam::539977196287:role/favas-poc
+  DeliforceAnalyticstaskcompletegetMethod:
+     Type: AWS::Serverless::Function
+     Properties:
+       FunctionName: Deliforce_Analytics_taskcomplete_get
+       Timeout: 300
+       Handler: index.handler
+       Runtime: nodejs6.10
+       CodeUri: ./Deliforce_Analytics_taskcomplete_get
+       Policies: AWSLambdaFullAccess
+       Role: arn:aws:iam::539977196287:role/favas-poc
+
+
