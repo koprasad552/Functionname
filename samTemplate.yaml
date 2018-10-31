@@ -45,7 +45,7 @@ Resources:
       Timeout: 300
       Handler: index.handler
       Runtime: nodejs6.10
-      CodeUri: build/Deliforce_roles_permission.zip
+      CodeUri: build/Deliforce_roles_permission
       Policies: AWSLambdaFullAccess
       Role: arn:aws:iam::204006638324:role/deliforceRole
 
