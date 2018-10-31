@@ -47,7 +47,7 @@ Resources:
       Runtime: nodejs6.10
       CodeUri: ./Deliforce_roles_permission
       Policies: AWSLambdaFullAccess
-      Role: arn:aws:iam::204006638324:role/deliforceRole
+      Role: arn:aws:iam::539977196287:role/favas-poc
 
 
 
